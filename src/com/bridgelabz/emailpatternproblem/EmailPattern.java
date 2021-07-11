@@ -68,5 +68,36 @@ public class EmailPattern
 			System.out.println("invalid");
 		}
 	}
-	
+	/**
+	 * Method to check country code is valid or not
+	 * @param email
+	 */
+
+	public void checkCountryCode(String email) 
+	{
+		boolean isMatched = Pattern.compile("([.][a-zA-Z]{2})*").matcher(email).matches();
+		if(isMatched)
+		{
+			System.out.println("It is valid");
+		}
+		else
+		{
+			System.out.println("invalid");
+		}
+	}
+	/**
+	 * Method to check given email is valid or not
+	 */
+	public void isValid(String email) 
+	{
+		boolean isMatched = Pattern.compile("^[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+([.][a-zA-Z]{2,4})([.][a-zA-Z]{2})*$").matcher(email).matches();
+		if(isMatched)
+		{
+			System.out.println("It is valid email");
+		}
+		else
+		{
+			System.out.println("invalid email");
+		}
+	}
 }

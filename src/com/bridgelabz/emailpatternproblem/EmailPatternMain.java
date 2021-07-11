@@ -29,7 +29,7 @@ public class EmailPatternMain
 		 */
 		EmailPattern obj2 = new EmailPattern();
 		obj2.checkThirdPart(email);
-		
+
 		/**
 		 * UC4
 		 * Validate optional part in email 
@@ -37,5 +37,16 @@ public class EmailPatternMain
 		EmailPattern obj3 = new EmailPattern();
 		obj3.checkOptionalPart(email);
 
+		/**
+		 * UC5
+		 * Check country code is valid or not
+		 */
+		EmailPattern obj4 = new EmailPattern();
+		obj4.checkCountryCode(email);
+		/**
+		 * Check given email is valid or not
+		 */
+		EmailPattern obj5 = new EmailPattern();
+		obj5.isValid(email);
 	}	
 }
