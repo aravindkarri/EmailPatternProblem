@@ -23,5 +23,12 @@ public class EmailPatternMain
 		 */
 		EmailPattern obj1 = new EmailPattern();
 		obj1.checkSecondPart(email);
+		/**
+		 * UC3
+		 * validate top level domain
+		 */
+		EmailPattern obj2 = new EmailPattern();
+		obj2.checkThirdPart(email);
+
 	}	
 }

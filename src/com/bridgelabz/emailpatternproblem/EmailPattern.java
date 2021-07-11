@@ -21,12 +21,28 @@ public class EmailPattern
 		}
 	}
 	/**
-	 * Method to ensure @ in and validate the mandatory secnod part
+	 * Method to ensure @ in and validate the mandatory second part
 	 * @param email
 	 */
 	public void checkSecondPart(String email) 
 	{
 		boolean isMatched = Pattern.compile("@[a-zA-Z0-9]+").matcher(email).matches();
+		if(isMatched)
+		{
+			System.out.println("It is valid");
+		}
+		else
+		{
+			System.out.println("invalid");
+		}
+	}
+	/**
+	 * Method to check top level domain is valid or not
+	 * @param email
+	 */
+	public void checkThirdPart(String email) 
+	{
+		boolean isMatched = Pattern.compile(".[a-zA-Z]{2,4}").matcher(email).matches();
 		if(isMatched)
 		{
 			System.out.println("It is valid");
