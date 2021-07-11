@@ -10,12 +10,18 @@ public class EmailPatternMain
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter an email address: ");
 		String email = scanner.nextLine();
-		scanner.close();
-		
-		/**UC1
-		 * Check first mandatory part in email is valid or not
+		/**
+		 * UC1
+		 * validate first mandatory part in email
 		 */
+		scanner.close();
 		EmailPattern obj = new EmailPattern();
 		obj.checkFirstPart(email);
+		/**
+		 * UC2
+		 * ensure @ in and validate the mandatory second part
+		 */
+		EmailPattern obj1 = new EmailPattern();
+		obj1.checkSecondPart(email);
 	}	
 }
