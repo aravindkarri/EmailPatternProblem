@@ -29,6 +29,13 @@ public class EmailPatternMain
 		 */
 		EmailPattern obj2 = new EmailPattern();
 		obj2.checkThirdPart(email);
+		
+		/**
+		 * UC4
+		 * Validate optional part in email 
+		 */
+		EmailPattern obj3 = new EmailPattern();
+		obj3.checkOptionalPart(email);
 
 	}	
 }

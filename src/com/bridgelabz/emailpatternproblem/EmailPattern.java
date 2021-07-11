@@ -42,7 +42,23 @@ public class EmailPattern
 	 */
 	public void checkThirdPart(String email) 
 	{
-		boolean isMatched = Pattern.compile(".[a-zA-Z]{2,4}").matcher(email).matches();
+		boolean isMatched = Pattern.compile("([.][a-zA-Z]{2,4})").matcher(email).matches();
+		if(isMatched)
+		{
+			System.out.println("It is valid");
+		}
+		else
+		{
+			System.out.println("invalid");
+		}
+	}
+	/**
+	 * Method to check optional part in email is valid or not
+	 * @param email
+	 */
+	public void checkOptionalPart(String email) 
+	{
+		boolean isMatched = Pattern.compile("([._+-][a-zA-Z0-9]+)*").matcher(email).matches();
 		if(isMatched)
 		{
 			System.out.println("It is valid");
